@@ -11,6 +11,11 @@ var reload = browserSync.reload;
 // https://www.npmjs.com/package/gulp-less
 var less = require('gulp-less');
 
+var LessPluginAutoPrefix = require('less-plugin-autoprefix');
+var autoprefix = new LessPluginAutoPrefix({
+    browsers: ['last 2 versions', 'not ie < 8']
+});
+
 // https://github.com/floridoo/gulp-sourcemaps
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -33,7 +38,9 @@ gulp.task('pack_demo', function(cb) {
 gulp.task('less_demo', function(cb) {
     gulp.src(['./demo/**/*.less'])
         .pipe(sourcemaps.init())
-        .pipe(less())
+        .pipe(less({
+            plugins: [autoprefix]
+        }))
         .pipe(concat('demo.css'))
         .pipe(replace([{
             search: /\/\*#\ssourceMappingURL=([^\*\/]+)\.map\s\*\//g,

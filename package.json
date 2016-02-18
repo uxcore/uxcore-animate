@@ -32,11 +32,16 @@
     "react": "^0.14.0",
     "react-dom": "~0.14.0",
     "uxcore-button": "~0.3.3",
+    "uxcore-dialog": "~0.2.6",
     "uxcore-kuma": "~1.2.0",
+    "uxcore-popover": "~0.2.1",
+    "uxcore-select2": "~0.1.10",
+    "uxcore-tooltip": "~0.2.3",
     "webpack": "^1.10.5"
   },
   "dependencies": {
     "classnames": "^2.1.2",
+    "less-plugin-autoprefix": "~1.5.1",
     "object-assign": "^4.0.0",
     "rc-animate": "~2.0.2"
   },

@@ -1,0 +1,20 @@
+/**
+ * Mixin
+ */
+// Mixin
+
+.animate-active(@animateName) {
+    visibility: visible;
+    -webkit-animation-name: @animateName;
+    -moz-animation-name: @animateName;
+    animation-name: @animateName;
+}
+
+.animate {
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-duration: .3s;
+    -mozanimation-timing-function: ease;
+    -mozanimation-duration: .3s;
+    animation-timing-function: ease;
+    animation-duration: .3s; 
+}

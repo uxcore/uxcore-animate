@@ -1,79 +1,13 @@
 /**
  * Animate Component Style for uxcore
+ * Powered by kuma-animate
  * @author eternalsky
  *
  * Copyright 2014-2015, Uxcore Team, Alinw.
  * All rights reserved.
  */
 
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slide-down-appear {
-  animation-name: slideInDown;
-}
-
-.slide-down-appear-active {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.slide-left-appear {
-  animation-fill-mode: both;
-  animation-duration: 1s;
-}
-
-
-.slide-left-appear-active {
-  animation-name: slideInLeft;
-}
-
-.slide-left-enter {
-  animation-name: slideInLeft;
-}
-
-
-.slide-left-enter-active {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes slideOutLeft {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-.slide-left-leave {
-  animation-name: slideOutLeft;
-}
-
-.slide-left-leave-active {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
+// @import "common.less";
+@import "dialog.less";
+@import "tip.less";
 

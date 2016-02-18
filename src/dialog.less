@@ -1,0 +1,324 @@
+@import "./mixin.less";
+
+
+// fadeIn
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        transform: scale(.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// slideInDown
+
+@keyframes slideInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+// slideInDown
+
+@keyframes slideInDown{
+    0% {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+// newspaper
+
+@keyframes newspaper{
+    0% {
+        opacity: 0;
+        transform: rotate(-360deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+// fall
+
+@keyframes fall{
+    0% {
+        opacity: 0;
+        transform: perspective(1300px) translateZ(600px) rotateX(20deg);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(1300px) translateZ(0px) rotateX(0deg);
+    }
+}
+
+// 3D fall
+
+@keyframes threeFallHorizontal{
+    0% {
+        opacity: 0;
+        transform: perspective(1300px) rotateY(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(1300px) rotateY(0deg);
+    }
+}
+
+// 3D fall - Vertical
+
+@keyframes threeFallVertical{
+    0% {
+        opacity: 0;
+        transform: perspective(1300px) rotateX(-90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(1300px) rotateX(0deg);
+    }
+}
+
+// 3D Sign
+
+@keyframes threeSign{
+    0% {
+        opacity: 0;
+        transform: perspective(1300px) rotateX(-60deg);
+        transform-origin: 50% 0;
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(1300px) rotateX(0deg);
+        transform-origin: 50% 0;
+    }
+}
+
+// Super Scale
+
+@keyframes superScale{
+    0% {
+        opacity: 0;
+        transform: scale(2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// 3D Slit
+
+@keyframes threeSlit {
+    0% {
+        transform: perspective(1300px) translateZ(-3000px) rotateY(90deg);
+    }
+    50% {
+        transform: perspective(1300px) translateZ(-250px) rotateY(89deg);
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: perspective(1300px) translateZ(0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+// 3d Rotate Bottom
+
+@keyframes threeRotateBottom{
+    0% {
+        opacity: 0;
+        transform: perspective(1300px) translateY(100%) rotateX(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(1300px) translateY(0%) rotateX(0deg);
+    }
+}
+
+// 3d Rotate Left
+
+@keyframes threeRotateLeft{
+    0% {
+        opacity: 0;
+        transform: perspective(1300px) translateZ(100px) translateX(-30%) rotateY(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(1300px) translateZ(0px) translateX(0%) rotateY(0deg);
+    }
+}
+
+
+// fadeIn
+.fade-enter, 
+.fade-appear {
+    opacity: 0;
+    transform: scale(.7);
+    .animate
+}
+
+.fade-enter-active, 
+.fade-appear-active {
+    .animate-active(fadeIn);
+}
+
+// slideInRight
+.slideRight-enter,
+.slideRight-appear {
+    opacity: 0;
+    transform: translateX(20%);
+    .animate
+}
+
+.slideRight-enter-active,
+.slideRight-appear-active {
+    .animate-active(slideInRight);
+}
+
+
+// slideInDown
+.slideDown-enter,
+.slideDown-appear {
+    opacity: 0;
+    transform: translateY(20%);
+    .animate
+}
+
+.slideDown-enter-active,
+.slideDown-appear-active {
+    .animate-active(slideInDown);
+}
+
+// newspaper
+.newspaper-enter,
+.newspaper-appear {
+    opacity: 0;
+    transform: rotate(-360deg);
+    .animate
+}
+
+.newspaper-enter-active,
+.newspaper-appear-active {
+    .animate-active(newspaper);
+}
+
+// fall
+.fall-enter,
+.fall-appear {
+    opacity: 0;
+    transform: perspective(1300px) translateZ(600px) rotateX(20deg);
+    .animate
+}
+
+.fall-enter-active,
+.fall-appear-active {
+    .animate-active(fall);
+}
+
+// 3D fall - Horizontal
+.threeFallH-enter,
+.threeFallH-appear {
+    opacity: 0;
+    transform: perspective(1300px) rotateY(-90deg);
+    .animate
+}
+
+.threeFallH-enter-active,
+.threeFallH-appear-a {
+    .animate-active(threeFallHorizontal);
+}
+
+// 3D fall - Vertical
+.threeFallV-enter,
+.threeFallV-appear {
+    opacity: 0;
+    transform: perspective(1300px) rotateX(-90deg);
+    .animate
+}
+
+.threeFallV-enter-active,
+.threeFallV-appear-active {
+    .animate-active(threeFallVertical);
+}
+
+// 3D Sign
+.threeSign-enter,
+.threeSign-appear {
+    opacity: 0;
+    transform: perspective(1300px) rotateX(-60deg);
+    transform-origin: 50% 0;
+    .animate
+}
+
+.threeSign-enter-active,
+.threeSign-appear-active {
+    .animate-active(threeSign);
+}
+
+// Super Scale
+.superScale-enter,
+.superScale-appear {
+    opacity: 0;
+    transform: scale(2);
+    .animate
+}
+
+.superScale-enter-active,
+.superScale-appear-active {
+    .animate-active(superScale);
+}
+
+// 3d Slit
+.threeSlit-enter,
+.threeSlit-appear {
+    transform: perspective(1300px) translateZ(-3000px) rotateY(90deg);
+    .animate
+}
+
+.threeSlit-enter-active,
+.threeSlit-appear-active {
+    .animate-active(threeSlit);
+}
+
+// 3d rotate bottom
+.threeRotateBottom-enter,
+.threeRotateBottom-appear {
+    opacity: 0;
+    transform: perspective(1300px) translateY(100%) rotateX(90deg);
+    transform-origin: 0 100%;
+    .animate
+}
+
+.threeRotateBottom-enter-active,
+.threeRotateBottom-appear-active {
+    .animate-active(threeRotateBottom);
+}
+
+// 3d rotate left
+.threeRotateLeft-enter,
+.threeRotateLeft-appear {
+    opacity: 0;
+    transform: perspective(1300px) translateZ(100px) translateX(-30%) rotateY(90deg);
+    transform-origin: 0 100%;
+    .animate
+}
+
+.threeRotateLeft-enter-active,
+.threeRotateLeft-appear-active {
+    .animate-active(threeRotateLeft);
+}
