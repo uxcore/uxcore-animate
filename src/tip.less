@@ -2,7 +2,7 @@
 
 // Classic - flipIn
 
-@keyframes flipIn{
+@keyframes flipIn {
     0% {
         opacity: 0;
         transform: perspective(1000px) rotate3d(1,0,0,45deg);
@@ -13,9 +13,20 @@
     }
 }
 
+@keyframes flipOut {
+    0% {
+        opacity: 1;
+        transform: perspective(1000px) rotate3d(1,0,0,0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: perspective(1000px) rotate3d(1,0,0,45deg);
+    }
+}
+
 // Classic - cropIn
 
-@keyframes cropIn{
+@keyframes cropIn {
     0% {
         opacity: 0;
         transform: translate3d(0,10px,0) rotate3d(1,1,0,25deg);
@@ -26,9 +37,20 @@
     }
 }
 
+@keyframes cropOut {
+    0% {
+        opacity: 1;
+        transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0,10px,0) rotate3d(1,1,0,25deg);
+    }
+}
+
 // Classic - scale
 
-@keyframes zoomIn{
+@keyframes zoomIn {
     0% {
         opacity: 0;
         transform: scale3d(0.7,0.3,1);
@@ -39,9 +61,20 @@
     }
 }
 
+@keyframes zoomOut {
+    0% {
+        opacity: 1;
+        transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+    }
+    100% {
+        opacity: 0;
+        transform: scale3d(0.7,0.3,1);
+    }
+}
+
 // Classic - rotateIn
 
-@keyframes rotateIn{
+@keyframes rotateIn {
     0% {
         opacity: 0;
         transition: all 0.2s;
@@ -49,6 +82,17 @@
     100% {
         opacity: 1;
         transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+    }
+}
+
+@keyframes rotateOut {
+    0% {
+        opacity: 1;
+        transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+    }
+    100% {
+        opacity: 0;
+        transition: all 0.2s;
     }
 }
 
@@ -64,6 +108,16 @@
     .animate-active(flipIn);
 }
 
+.flip-leave {
+    opacity: 1;
+    transform: perspective(1000px) rotate3d(1,0,0,0deg);
+    .animate
+}
+
+.flip-leave-active {
+    .animate-active(flipOut);
+}
+
 .crop-enter,
 .crop-appear {
     opacity: 0;
@@ -75,6 +129,16 @@
     .animate-active(cropIn);
 }
 
+.crop-leave {
+    opacity: 1;
+    transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+    .animate
+}
+
+.crop-leave-active {
+    .animate-active(cropOut);
+}
+
 .zoom-enter,
 .zoom-appear {
     opacity: 0;
@@ -84,5 +148,15 @@
 .zoom-enter-active,
 .zoom-appear-active {
     .animate-active(zoomIn);
+}
+
+.zoom-leave {
+    opacity: 1;
+    transform: translate3d(0,0,0) rotate3d(0,0,0,0);
+    .animate
+}
+
+.zoom-leave-active {
+    .animate-active(zoomOut);
 }
 

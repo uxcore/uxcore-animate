@@ -26,7 +26,7 @@ class ButtonWrap extends React.Component {
             }}>
                 <Button>{this.props.name}</Button>
             </div>
-        ) 
+        )
     }
 }
 
@@ -35,7 +35,8 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            effect: 'fade'
+            dialogEffect: 'fade',
+            tipEffect: 'zoom'
         }
     }
 
@@ -55,7 +56,14 @@ class Demo extends React.Component {
 
     handleChange(value) {
         this.setState({
-            effect: value
+            dialogEffect: value
+        })
+    }
+
+
+    handleChange2(value) {
+        this.setState({
+            tipEffect: value
         })
     }
 
@@ -76,11 +84,11 @@ class Demo extends React.Component {
         return (
             <div>
                 <h1>对话框动画展示</h1>
-                <Dialog visible={me.state.visible} transitionName={me.state.effect} onCancel={me.handleCancel.bind(me)}> 
+                <Dialog visible={me.state.visible} transitionName={me.state.dialogEffect} onCancel={me.handleCancel.bind(me)}> 
                     <span>测试</span>
                 </Dialog>
                 <div>
-                    <Select className="demo-select" placeholder="请选择动画效果" defaultValue={me.state.effect} onChange={me.handleChange.bind(me)}>
+                    <Select className="demo-select" placeholder="请选择动画效果" defaultValue={me.state.dialogEffect} onChange={me.handleChange.bind(me)} transitionName="slideUp">
                         {['fade', 'slideRight', 'slideDown', 'newspaper', 'fall', 'threeFallH', 'threeFallV', 'threeSign', 'superScale', 'threeSlit', 'threeRotateBottom', 'threeRotateLeft'].map((item, index) => {
                             return <Select.Option key={item}>{item}</Select.Option>
                         })}
@@ -89,14 +97,25 @@ class Demo extends React.Component {
                 <Button onClick={me.handleVisibleChange.bind(this)}>测试</Button>
                 
                 <h1>提示框动画展示</h1>
+                <p style={{
+                    color: 'grey'
+                }}>包括 flip/crop/zoom</p>
                 <div>
-                    <Tooltip placement="top" overlay={overlay} trigger={['hover']} transitionName="zoom">
+                    <div>
+                        <Select className="demo-select" placeholder="请选择动画效果" defaultValue={me.state.tipEffect} onChange={me.handleChange2.bind(me)} transitionName="slideUp">
+                            {['crop', 'flip', 'zoom'].map((item, index) => {
+                                return <Select.Option key={item}>{item}</Select.Option>
+                            })}
+                        </Select>
+                    </div>
+                    <Tooltip placement="top" overlay={overlay} placement='right' trigger={['hover']} transitionName={me.state.tipEffect}>
                         <Button>动画效果</Button>
                     </Tooltip>
                 </div>
             </div>
-        );
+            );
     }
-};
+}
+;
 
 module.exports = Demo;
