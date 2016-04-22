@@ -1,0 +1,50 @@
+@keyframes moveUpIn {
+    0% {
+        transform-origin: 0 0;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform-origin: 0 0;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUpOut {
+    0% {
+        transform-origin: 0 0;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform-origin: 0 0;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.moveUp-enter,
+.moveUp-appear {
+    transform-origin: 0 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    .animate
+}
+.moveUp-enter-active,
+.moveUp-appear-active {
+    .animate-active(moveUpIn);
+}
+
+.moveUp-leave {
+    transform-origin: 0 0;
+    transform: translateY(0);
+    opacity: 1;
+    .animate
+}
+
+.moveUp-leave-active {
+    .animate-active(moveUpOut);
+}
