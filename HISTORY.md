@@ -1,8 +1,13 @@
 # history
 
+## 0.2.0
+
+* `CHANGED` new scaffold
+* `NEW` add fadeOut/slideOutDown
+
 ## 0.1.2
 
-* change fadeIn to dlgFadeIn
+* `CHANGED` change fadeIn to dlgFadeIn
 
 ## 0.1.1
 

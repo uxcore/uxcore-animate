@@ -11,6 +11,24 @@
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 // slideInDown
 
 @keyframes slideInRight{
@@ -34,6 +52,17 @@
     100% {
         opacity: 1;
         transform: translateY(0%);
+    }
+}
+
+@keyframes slideOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20%);
     }
 }
 
@@ -161,6 +190,26 @@
 }
 
 
+.fade-enter,
+.fade-appear {
+    opacity: 0;
+    .animate
+}
+
+.fade-enter-active,
+.fade-appear-active {
+   .animate-active(fadeIn);
+}
+
+.fade-leave {
+    opacity: 1;
+    .animate
+}
+
+.fade-leave-active {
+    .animate-active(fadeOut);
+}
+
 // DlgFadeIn
 .dlgFade-enter, 
 .dlgFade-appear {
@@ -199,6 +248,15 @@
 .slideDown-enter-active,
 .slideDown-appear-active {
     .animate-active(slideInDown);
+}
+
+.slideDown-leave {
+    opacity: 1;
+    .animate
+}
+
+.slideDown-leave-active {
+    .animate-active(slideOutDown);
 }
 
 // newspaper
