@@ -6,12 +6,13 @@
  * All rights reserved.
  */
 
-const React = require('react');
-const Select = require('uxcore-select2');
-const Button = require('uxcore-button');
-const Dialog = require('uxcore-dialog');
-const Tooltip = require('uxcore-tooltip');
-const Message = require('uxcore-message');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Select from 'uxcore-select2';
+import Button from 'uxcore-button';
+import Dialog from 'uxcore-dialog';
+import Tooltip from 'uxcore-tooltip';
+import Message from 'uxcore-message';
 
 // const Animate = require('../src');
 
@@ -24,7 +25,7 @@ const ButtonWrap = props => (
 );
 
 ButtonWrap.propTypes = {
-  visible: React.PropTypes.bool,
+  visible: PropTypes.bool,
 };
 
 const handleMessageClick = () => {
@@ -39,14 +40,6 @@ class Demo extends React.Component {
       dialogEffect: 'slideDown',
       tipEffect: 'zoom',
     };
-  }
-
-  renderButton() {
-    const arr = [];
-    for (let i = 0; i < 5; i++) {
-      arr.push(<ButtonWrap key={i} name={`Button${i}`} visible={this.state.visible} />);
-    }
-    return arr;
   }
 
   handleVisibleChange() {
@@ -72,6 +65,14 @@ class Demo extends React.Component {
     this.setState({
       visible: false,
     });
+  }
+
+  renderButton() {
+    const arr = [];
+    for (let i = 0; i < 5; i++) {
+      arr.push(<ButtonWrap key={i} name={`Button${i}`} visible={this.state.visible} />);
+    }
+    return arr;
   }
 
   render() {
@@ -100,7 +101,20 @@ class Demo extends React.Component {
             onChange={me.handleChange.bind(me)}
             transitionName="slideUp"
           >
-            {['fade', 'slideRight', 'slideDown', 'newspaper', 'fall', 'threeFallH', 'threeFallV', 'threeSign', 'superScale', 'threeSlit', 'threeRotateBottom', 'threeRotateLeft'].map(item => (
+            {[
+              'fade',
+              'slideRight',
+              'slideDown',
+              'newspaper',
+              'fall',
+              'threeFallH',
+              'threeFallV',
+              'threeSign',
+              'superScale',
+              'threeSlit',
+              'threeRotateBottom',
+              'threeRotateLeft',
+            ].map(item => (
               <Select.Option key={item}>
                 {item}
               </Select.Option>
@@ -126,7 +140,12 @@ class Demo extends React.Component {
               ))}
             </Select>
           </div>
-          <Tooltip overlay={overlay} placement="right" trigger={['hover']} transitionName={me.state.tipEffect}>
+          <Tooltip
+            overlay={overlay}
+            placement="right"
+            trigger={['hover']}
+            transitionName={me.state.tipEffect}
+          >
             <Button>动画效果</Button>
           </Tooltip>
         </div>
@@ -140,4 +159,4 @@ class Demo extends React.Component {
 }
 
 
-module.exports = Demo;
+export default Demo;

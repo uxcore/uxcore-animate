@@ -6,5 +6,6 @@
  * All rights reserved.
  */
 
- var Demo = require('./AnimateDemo');
- ReactDOM.render(<Demo/>, document.getElementById('UXCoreDemo'));
+import Demo from './AnimateDemo';
+
+ReactDOM.render(<Demo/>, document.getElementById('UXCoreDemo'));
