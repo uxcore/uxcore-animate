@@ -1,5 +1,9 @@
 # history
 
+## 0.2.1
+
+* `CHANGED` fit React@15
+
 ## 0.2.0
 
 * `CHANGED` new scaffold
