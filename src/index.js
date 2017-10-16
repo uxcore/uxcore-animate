@@ -6,4 +6,4 @@
  * All rights reserved.
  */
 
-module.exports = require('./Animate');
+export default from './Animate';

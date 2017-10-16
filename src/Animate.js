@@ -6,7 +6,7 @@
  * All rights reserved.
  */
 
-const RcAnimate = require('rc-animate');
+import RcAnimate from 'rc-animate';
 
 class Animate extends RcAnimate {}
 
@@ -18,4 +18,4 @@ Animate.propTypes = RcAnimate.propTypes;
 
 Animate.displayName = 'Animate';
 
-module.exports = Animate;
+export default Animate;
