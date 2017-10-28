@@ -1,5 +1,9 @@
 # history
 
+## 0.2.2
+
+* `CHANGED` update `rc-animate` to `^2.0.0`
+
 ## 0.2.1
 
 * `CHANGED` fit React@15

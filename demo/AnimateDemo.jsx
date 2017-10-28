@@ -99,7 +99,6 @@ class Demo extends React.Component {
             placeholder="请选择动画效果"
             defaultValue={me.state.dialogEffect}
             onChange={me.handleChange.bind(me)}
-            transitionName="slideUp"
           >
             {[
               'fade',
@@ -131,7 +130,6 @@ class Demo extends React.Component {
               placeholder="请选择动画效果"
               defaultValue={me.state.tipEffect}
               onChange={me.handleChange2.bind(me)}
-              transitionName="slideUp"
             >
               {['crop', 'flip', 'zoom'].map(item => (
                 <Select.Option key={item}>

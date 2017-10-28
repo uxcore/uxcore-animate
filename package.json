@@ -1,6 +1,6 @@
 {
  "name": "uxcore-animate",
- "version": "0.2.1",
+ "version": "0.2.2",
  "description": "uxcore-animate component for uxcore.",
  "repository": "https://github.com/uxcore/uxcore-animate.git",
  "author": "eternalsky",
@@ -42,20 +42,20 @@
   "react-addons-test-utils": "15.x",
   "react-dom": "15.x",
   "react-test-renderer": "15.x",
-  "uxcore-button": "^0.4.6",
-  "uxcore-dialog": "^0.4.5",
+  "uxcore-button": "*",
+  "uxcore-dialog": "*",
   "uxcore-kuma": "*",
-  "uxcore-message": "^0.5.0",
-  "uxcore-popover": "^0.5.0",
-  "uxcore-select2": "^0.4.0",
+  "uxcore-message": "*",
+  "uxcore-popover": "*",
+  "uxcore-select2": "*",
   "uxcore-tools": "0.2.x",
-  "uxcore-tooltip": "^0.4.5"
+  "uxcore-tooltip": "*"
  },
  "dependencies": {
   "classnames": "^2.1.2",
   "object-assign": "^4.0.0",
   "prop-types": "15.x",
-  "rc-animate": "~2.0.2"
+  "rc-animate": "^2.0.0"
  },
  "contributors": [],
  "license": "MIT"
